@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Koncert Veegas feat.Cypisik</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .concert-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .concert-text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .concert-image {
+            flex: 1;
+        }
+
+        .concert-image img {
+            width: 222px;
+            height: 222px;
+        }
+
+        .concert-dates {
+            font-weight: bold;
+        }
+
+        .concert-price {
+            color: #ff0000;
+            font-weight: bold;
+        }
+
+        .events {
+            margin-top: 20px;
+        }
+
+        .event {
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        form {
+            border: 2px solid #333;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        select {
+            width: 100%;
+        }
+
+        a.button {
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        a.button:hover {
+            background-color: #555;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Veegas and Cypis</h1>
+
+        <div class="concert-info">
+            <div class="concert-text">
+                <p>Halo ziemia, przygotujcie się na premierową trasę najlepszych w Polsce wykonawców piękności! Veegas i Cypis odwiedzą jesienią 5 polskich miast!</p>
+                <p class="concert-dates">27.10.2023 – 24.11.2023  |  5 wydarzeń</p>
+                <p>Zamów od <span class="concert-price">300,00 zł*</span></p>
+            </div>
+            <div class "concert-image">
+                <img src="cypis.webp" alt="Cypis - Vixy">
+            </div>
+        </div>
+
+        <div class="events">
+            <div class="event">
+                <p>27 paź 2023, Pt 21:00, GDAŃSK - Klub B90</p>
+                <p>Cypis - Klubowa Vixa</p>
+                <p>od 300,00 zł*</p>
+            </div>
+            <div class="event">
+                <p>02 lis 2023, Cz 20:30, LUBLIN - Fabryka Kultury ZGRZYT</p>
+                <p>Cypis - Piękne chwile</p>
+                <p>od 300,00 zł*</p>
+            </div>
+            <div class="event">
+                <p>09 lis 2023, Cz 20:00, KRAKÓW - Klub Studio</p>
+                <p>Cypis - Lobuziarka</p>
+                <p>od 300,00 zł*</p>
+            </div>
+            <div class="event">
+                <p>10 lis 2023, Pt 21:00, WARSZAWA - Progresja</p>
+                <p>Veegas-Piwo paliwo</p>
+                <p>od 350,00 zł*</p>
+            </div>
+            <div class="event">
+                <p>24 lis 2023, Pt 21:00, ŁÓDŹ - Klub Wytwórnia</p>
+                <p>Veegas-Plastikowa Biedronka</p>
+                <p>od 350,00 zł*</p>
+            </div>
+        </div>
+
+        <form action="mailto:karpevychtolik@gmail.com" method="post" enctype="text/plain">
+            <label for="imie">Podaj Imię:</label>
+            <input type="text" id="imie" name="imie" required>
+
+            <label for="nazwisko">Podaj Nazwisko:</label>
+            <input type="text" id="nazwisko" name="nazwisko" required>
+
+            <label for="email">Podaj emaila:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="wiek">Wpisanie wieku:</label>
+            <input type="number" id="wiek" name="wiek" required>
+
+            <label for="data">Wybór daty koncertu:</label>
+            <select id="data" name="data" required>
+                <option value="27.10.2023">27 paź 2023, Pt 21:00, GDAŃSK - Klub B90</option>
+                <option value="02.11.2023">02 lis 2023, Cz 20:30, LUBLIN - Fabryka Kultury ZGRZYT</option>
+                <option value="09.11.2023">09 lis 2023, Cz 20:00, KRAKÓW - Klub Studio</option>
+                <option value="10.11.2023">10 lis 2023, Pt 21:00, WARSZAWA - Progresja</option>
+                <option value="24.11.2023">24 lis 2023, Pt 21:00, ŁÓDŹ - Klub Wytwórnia</option>
+            </select>
+
+            <label>Wybór wielokrotny piosenek które chcesz usłyszeć:</label>
+            <p>
+                <input type="checkbox" id="piosenka1" name="piosenki[]" value="piosenka1">
+                <label for="piosenka1">Klubowa Vixa</label>
+                <a class="button" href="Cypis-Klubowa Vixa.mp3" target="_blank">Odtwórz</a>
+            </p>
+            <p>
+                <input type="checkbox" id="piosenka2" name="piosenki[]" value="piosenka2">
+                <label for="piosenka2">Piękne chwile</label>
+                <a class="button" href="Cypis - Piękne Chwile.mp3" target="_blank">Odtwórz</a>
+            </p>
+            <p>
+                <input type="checkbox" id="piosenka3" name="piosenki[]" value="piosenka3">
+                <label for="piosenka3">Cypis-Lobuziarka</label>
+                <a class="button" href="Cypis-Lobuziarka.mp3" target="_blank">Odtwórz</a>
+            </p>
+            <p>
+                <input type="checkbox" id="piosenka4" name="piosenki[]" value="piosenka1">
+                <label for="piosenka1">Veegas - Plastikowa Biedronka</label>
+                <a class="button" href="Veegas - Plastikowa Biedronka (Official Video).mp3" target="_blank">Odtwórz</a>
+            </p>
+            <p>
+                <input type="checkbox" id="piosenka5" name="piosenki[]" value="piosenka2">
+                <label for="piosenka2">Veegas-Piwo Paliwo</label>
+                <a class="button" href="Veegas-Piwo Paliwo.mp3" target="_blank">Odtwórz</a>
+            </p>
+
+            <label>Wybór z listy co chcesz zjeść/wypić:</label>
+            <select id="posilek" name="posilek" required>
+                <option value="pizza">Pizza</option>
+                <option value="burger">Burger</option>
+                <option value="burger">Narkotyki, dziewczyny</option>
+                <option value="inne">Inne</option>
+            </select>
+
+            <label for="zgoda">
+                <input type="checkbox" id="zgoda" name="zgoda" required> Zaznacz zgody na przetwarzanie danych
+            </label>
+            
+            <p>
+                <input type="checkbox" id="ticketAlarmZgoda" name="ticketAlarmZgoda" required>
+                <label for="ticketAlarmZgoda">Tak, chcę otrzymywać powiadomienia TicketAlarm z informacjami na temat dostępności biletów na imprezy artystów z mojej listy TicketAlarm. Oświadczam, że mam skończone 16 lat. Zapoznałam/łem się ze szczegółowymi informacjami na temat przetwarzania danych osobowych oraz przysługujących mi praw znajdującymi się <a href="https://nofluffjobs.com/pl/log/praca-w-it/cv/klauzula-cv-2023-aktualna-wersja-niezbedna-przy-rekrutacjach/" target="_blank">tutaj</a>.</label>
+            </p>
+
+            <p>
+                <input type="checkbox" id="emailZgoda" name="emailZgoda" required>
+                <label for="emailZgoda">Zgadzam się na przetwarzanie moich danych osobowych przez administratora w celu przesyłania powiadomień TicketAlarm i w tym celu zgadzam się na używanie przez administratora telekomunikacyjnych urządzeń końcowych, których jestem użytkownikiem, dla celów marketingu bezpośredniego oraz na przesyłanie informacji handlowych drogą elektroniczną na podany powyżej adres e-mail. Administratorem danych osobowych jest Eventim sp. z oo z siedzibą w Warszawie, al. Jerozolimskie 25, 00-508 Warszawa. Zostałam/em poinformowana/y, że przysługuje mi prawo do cofnięcia zgody oraz że jej wycofanie nie wpłynie na zgodność z prawem przetwarzania, którego dokonano na podstawie zgody przed jej wycofaniem. Masz prawo do wycofania zgody w dowolnym momencie. Szczegółowe informacje na temat sposobów wycofania zgody znajdują się <a href="https://nofluffjobs.com/pl/log/praca-w-it/cv/klauzula-cv-2023-aktualna-wersja-niezbedna-przy-rekrutacjach/" target="_blank">tutaj</a>.</label>
+            </p>
+
+            <button type="submit">Wyślij</button>
+        </form>
+    </div>
+</body>
+</html>
